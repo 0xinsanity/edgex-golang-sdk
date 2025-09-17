@@ -396,3 +396,21 @@ func (c *Client) GetOrders(ctx context.Context, orderIdList string) (*openapi.Re
 	}
 	return resp, nil
 }
+
+func (c *Client) GetOrdersByClientId(ctx context.Context, cloidList string) (*openapi.ResultListOrder, error) {
+	req := c.openapiClient.Class04OrderPrivateApiAPI.GetOrderByClientOrderId(ctx)
+	if cloidList != "" {
+		req = req.ClientOrderIdList(cloidList)
+	}
+	resp, _, err := req.ApiService.GetOrderByClientOrderId(ctx).Execute()
+	if err != nil {
+		return nil, err
+	}
+	if resp.GetCode() != ResponseCodeSuccess {
+		if errorParam := resp.GetErrorParam(); errorParam != nil {
+			return nil, fmt.Errorf("request failed with error params: %v", errorParam)
+		}
+		return nil, fmt.Errorf("request failed with code: %s", resp.GetCode())
+	}
+	return resp, nil
+}
