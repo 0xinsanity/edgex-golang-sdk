@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/edgex-Tech/edgex-golang-sdk/starkcurve"
+	"github.com/0xinsanity/edgex-golang-sdk/starkcurve"
 
 	"github.com/google/uuid"
 )

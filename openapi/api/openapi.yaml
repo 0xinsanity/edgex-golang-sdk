@@ -6,7 +6,7 @@ info:
   version: v1.0.0
 externalDocs:
   description: Http Gateway project address
-  url: https://github.com/edgex-Tech/edgex-http-gateway
+  url: https://github.com/0xinsanity/edgex-http-gateway
 servers:
 - description: Generated server url
   url: https://api-docs.edgex.exchange

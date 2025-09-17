@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	openapi "github.com/edgex-Tech/edgex-golang-sdk/openapi"
-	"github.com/edgex-Tech/edgex-golang-sdk/sdk/internal"
+	openapi "github.com/0xinsanity/edgex-golang-sdk/openapi"
+	"github.com/0xinsanity/edgex-golang-sdk/sdk/internal"
 )
 
 // Client represents the quote client

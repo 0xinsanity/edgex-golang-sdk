@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/edgex-Tech/edgex-golang-sdk/sdk/ws"
-	"github.com/edgex-Tech/edgex-golang-sdk/test"
+	"github.com/0xinsanity/edgex-golang-sdk/sdk/ws"
+	"github.com/0xinsanity/edgex-golang-sdk/test"
 )
 
 func TestWebSocket(t *testing.T) {
@@ -18,7 +18,7 @@ func TestWebSocket(t *testing.T) {
 		t.Skip("Skipping test: TEST_WS_BASE_URL environment variable is not set")
 	}
 
-	manager := ws.NewManager(baseURL, 0, "")  // No auth needed for public WebSocket
+	manager := ws.NewManager(baseURL, 0, "") // No auth needed for public WebSocket
 
 	// Connect to public WebSocket
 	err := manager.ConnectPublic(ctx)
@@ -42,9 +42,9 @@ func TestWebSocket(t *testing.T) {
 	// Test cases for different subscription types
 	var tickerReceived, klineReceived, depthReceived, tradesReceived bool
 	testCases := []struct {
-		name     string
-		subFunc  func() error
-		msgCh    chan struct{}
+		name    string
+		subFunc func() error
+		msgCh   chan struct{}
 	}{
 		{
 			name: "Market Ticker",

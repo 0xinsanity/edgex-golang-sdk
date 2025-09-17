@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/edgex-Tech/edgex-golang-sdk/sdk/quote"
-	"github.com/edgex-Tech/edgex-golang-sdk/test"
+	"github.com/0xinsanity/edgex-golang-sdk/sdk/quote"
+	"github.com/0xinsanity/edgex-golang-sdk/test"
 	"github.com/stretchr/testify/assert"
 )
 

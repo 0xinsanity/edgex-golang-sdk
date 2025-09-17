@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"strconv"
 
-	"github.com/edgex-Tech/edgex-golang-sdk/sdk"
+	"github.com/0xinsanity/edgex-golang-sdk/sdk"
 	"github.com/joho/godotenv"
 )
 

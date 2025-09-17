@@ -2,12 +2,12 @@ package order
 
 import (
 	"encoding/json"
-	"testing"
 	"strings"
+	"testing"
 
-	"github.com/edgex-Tech/edgex-golang-sdk/openapi"
-	"github.com/edgex-Tech/edgex-golang-sdk/sdk/order"
-	"github.com/edgex-Tech/edgex-golang-sdk/test"
+	"github.com/0xinsanity/edgex-golang-sdk/openapi"
+	"github.com/0xinsanity/edgex-golang-sdk/sdk/order"
+	"github.com/0xinsanity/edgex-golang-sdk/test"
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/assert"
 )

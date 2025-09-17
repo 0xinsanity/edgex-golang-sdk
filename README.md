@@ -5,7 +5,7 @@ A Go SDK for interacting with the edgeX Exchange API.
 ## Installation
 
 ```bash
-go get github.com/edgex-Tech/edgex-golang-sdk
+go get github.com/0xinsanity/edgex-golang-sdk
 ```
 
 ## Quick Start
@@ -18,7 +18,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/edgex-Tech/edgex-golang-sdk/sdk"
+    "github.com/0xinsanity/edgex-golang-sdk/sdk"
 )
 
 func main() {

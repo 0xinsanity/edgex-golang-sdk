@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"time"
 
-	openapi "github.com/edgex-Tech/edgex-golang-sdk/openapi"
+	openapi "github.com/0xinsanity/edgex-golang-sdk/openapi"
 
-	"github.com/edgex-Tech/edgex-golang-sdk/starkcurve"
+	"github.com/0xinsanity/edgex-golang-sdk/starkcurve"
 )
 
 // Client represents the base client with common functionality
