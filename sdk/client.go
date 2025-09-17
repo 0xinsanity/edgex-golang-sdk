@@ -185,6 +185,11 @@ func (c *Client) GetActiveOrders(ctx context.Context, params *order.GetActiveOrd
 	return c.Order.GetActiveOrders(ctx, params)
 }
 
+// GetOrders gets orders with pagination and filters
+func (c *Client) GetOrders(ctx context.Context, params *order.GetOrdersParams) (*openapi.ResultListOrder, error) {
+	return c.Order.GetOrders(ctx, params.OrderIDList)
+}
+
 // GetOrderFillTransactions gets order fill transactions with pagination and filters
 func (c *Client) GetOrderFillTransactions(ctx context.Context, params *order.OrderFillTransactionParams) (*openapi.ResultPageDataOrderFillTransaction, error) {
 	return c.Order.GetOrderFillTransactions(ctx, params)

@@ -103,6 +103,10 @@ type CancelOrderParams struct {
 	ContractId string // Contract ID for canceling all orders
 }
 
+type GetOrdersParams struct {
+	OrderIDList string // Comma-separated list of order IDs
+}
+
 // OrderResponse represents the response from creating an order
 type OrderResponse struct {
 	Code         string      `json:"code"`

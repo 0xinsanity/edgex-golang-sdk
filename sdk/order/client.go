@@ -377,3 +377,22 @@ func (c *Client) GetMaxOrderSize(ctx context.Context, contractID string, price f
 	}
 	return resp, nil
 }
+
+// GetMaxOrderSize gets the maximum order size for a given contract and price
+func (c *Client) GetOrders(ctx context.Context, orderIdList string) (*openapi.ResultListOrder, error) {
+	req := c.openapiClient.Class04OrderPrivateApiAPI.GetOrderById(ctx)
+	if orderIdList != "" {
+		req = req.OrderIdList(orderIdList)
+	}
+	resp, _, err := req.ApiService.GetOrderById(ctx).Execute()
+	if err != nil {
+		return nil, err
+	}
+	if resp.GetCode() != ResponseCodeSuccess {
+		if errorParam := resp.GetErrorParam(); errorParam != nil {
+			return nil, fmt.Errorf("request failed with error params: %v", errorParam)
+		}
+		return nil, fmt.Errorf("request failed with code: %s", resp.GetCode())
+	}
+	return resp, nil
+}
