@@ -55,6 +55,8 @@ type Position struct {
 	CreatedTime *string `json:"createdTime,omitempty"`
 	// 更新时间
 	UpdatedTime *string `json:"updatedTime,omitempty"`
+
+	FillPrice *string `json:"fillPrice,omitempty"`
 }
 
 // NewPosition instantiates a new Position object
