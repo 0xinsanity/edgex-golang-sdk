@@ -190,6 +190,10 @@ func (c *Client) GetOrders(ctx context.Context, params *order.GetOrdersParams) (
 	return c.Order.GetOrders(ctx, params.OrderIDList)
 }
 
+func (c *Client) GetOrdersByClientId(ctx context.Context, params *order.GetOrdersParams) (*openapi.ResultListOrder, error) {
+	return c.Order.GetOrders(ctx, params.OrderIDList)
+}
+
 // GetOrderFillTransactions gets order fill transactions with pagination and filters
 func (c *Client) GetOrderFillTransactions(ctx context.Context, params *order.OrderFillTransactionParams) (*openapi.ResultPageDataOrderFillTransaction, error) {
 	return c.Order.GetOrderFillTransactions(ctx, params)

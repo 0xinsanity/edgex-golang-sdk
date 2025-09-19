@@ -384,6 +384,7 @@ func (c *Client) GetOrders(ctx context.Context, orderIdList string) (*openapi.Re
 	if orderIdList != "" {
 		req = req.OrderIdList(orderIdList)
 	}
+	req = req.AccountId(strconv.FormatInt(c.GetAccountID(), 10))
 	resp, _, err := req.ApiService.GetOrderById(ctx).Execute()
 	if err != nil {
 		return nil, err
@@ -402,6 +403,7 @@ func (c *Client) GetOrdersByClientId(ctx context.Context, cloidList string) (*op
 	if cloidList != "" {
 		req = req.ClientOrderIdList(cloidList)
 	}
+	req = req.AccountId(strconv.FormatInt(c.GetAccountID(), 10))
 	resp, _, err := req.ApiService.GetOrderByClientOrderId(ctx).Execute()
 	if err != nil {
 		return nil, err
